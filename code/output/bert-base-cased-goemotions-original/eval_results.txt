@@ -1,0 +1,11 @@
+accuracy_original = 0.41938455868804125
+loss_original = 0.12803768888115882
+macro_f1_original = 0.5029685653792753
+macro_precision_original = 0.5029243684784196
+macro_recall_original = 0.5330441322868956
+micro_f1_original = 0.5709256271086988
+micro_precision_original = 0.5327857631759069
+micro_recall_original = 0.6149470690472428
+weighted_f1_original = 0.5734666145854924
+weighted_precision_original = 0.5397398692803985
+weighted_recall_original = 0.6149470690472428

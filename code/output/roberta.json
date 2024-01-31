@@ -1,0 +1,15 @@
+{
+    "roberta-original":{
+        "accuracy": 0.44839660892001476,
+        "macro_f1": 0.4964320332081301,
+        "macro_precision": 0.5369120565313799,   
+        "macro_recall": 0.4984011732029408,      
+        "micro_f1": 0.6088718757036704,
+        "micro_precision": 0.5841855105862019,   
+        "micro_recall": 0.6357366771159875,      
+        "weighted_f1": 0.6002617961525393,       
+        "weighted_precision": 0.5790873704973768,
+        "weighted_recall": 0.6357366771159875,
+        "time": 421
+    }
+}

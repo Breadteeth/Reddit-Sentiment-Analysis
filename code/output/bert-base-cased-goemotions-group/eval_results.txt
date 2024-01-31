@@ -1,0 +1,11 @@
+accuracy_group = 0.5505804311774462
+loss_group = 0.3388187876519035
+macro_f1_group = 0.7006236330255144
+macro_precision_group = 0.6439766178241548
+macro_recall_group = 0.77745450707788
+micro_f1_group = 0.7201614154896787
+micro_precision_group = 0.6575963718820862
+micro_recall_group = 0.7958833619210978
+weighted_f1_group = 0.7256692243897672
+weighted_precision_group = 0.6745324094520295
+weighted_recall_group = 0.7958833619210978
