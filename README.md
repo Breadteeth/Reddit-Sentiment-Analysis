@@ -1,6 +1,5 @@
-# CS182 Project
 # Performance evaluation of Reddit Comments using ML and NLP methods in Sentiment Analysis
-> This is the final project for CS182, Introduction to Machine Learning in ShanghaiTech in 2023 fall.
+> This is originally from our final project for CS182, Introduction to Machine Learning in ShanghaiTech in 2023 fall. After the course, we decided to continue to deepen and expand our research。
 
 ## Code 
   - Before running anything, you should download two things: dataset and pytorch_model.bin. 
@@ -18,11 +17,11 @@
 
 
 ## Topic
-使用Google [GoEmotions](https://github.com/google-research/google-research/tree/master/goemotions) 数据集进行情感分类任务的实现与不同算法的表现比较.
+Implementation of emotion classification task using Google [GoEmotions](https://github.com/google-research/google-research/tree/master/goemotions) data set and performance comparison of different algorithms.
 
 ## Contribution-Group 30
-- 组员1 张晓夏：论文撰写与分析
-- 组员2 齐修远：SVM、RoBERTa、LLM模型实现
-- 组员3 滕孜信：Bayes+KNN/MLE模型实现
-- 论文研究、模型考量、Presentation与其他工作：Equal Contribution
+- Team member 1 Xiaoxia Zhang: paper writing and analysis
+- Team Member 2 Xiuyuan Qi: Implementation of SVM, RoBERTa, and LLM models
+- Team member 3 Zixin Teng: Bayes+KNN/MLE model implementation
+- Thesis research, model consideration, Presentation and other work: Equal Contribution
 
