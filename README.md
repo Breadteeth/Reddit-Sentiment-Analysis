@@ -1,5 +1,5 @@
 # Performance evaluation of Reddit Comments using ML and NLP methods in Sentiment Analysis
-> This is originally from our final project for CS182, Introduction to Machine Learning in ShanghaiTech in 2023 fall. After the course, we decided to continue to deepen and expand our research。
+> This is originally from our final project for CS182, Introduction to Machine Learning in ShanghaiTech in 2023 fall. After the course, we decided to continue to deepen and expand our research.
 
 ## Code 
   - Before running anything, you should download two things: dataset and pytorch_model.bin. 

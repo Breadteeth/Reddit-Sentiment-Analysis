@@ -118,7 +118,7 @@ class Eval:
     
     def get_metrics(self, data_path):
         data = self.__load_data(data_path)
-        data = data[:50] # for test
+        data = data[:50] #FIXME for test
         type_num_map = {
             "original": 28,
             "ekman": 7,
@@ -147,5 +147,46 @@ class Eval:
                 ground = np.append(ground, [one_hot_label], axis=0)
         
         result = compute_metrics(ground, preds)
+        return result
+    
+    def get_classed_metrics(self, data_path):
+        data = self.__load_data(data_path) # [("text",{l1,...})]
+        data = data[:500] #FIXME for test
+        type_num_map = {
+            "original": 28,
+            "ekman": 7,
+            "group": 4
+        }
+        type_num = type_num_map[data_path.split('\\')[-2]]
+
+        results = self.predict(data) #[{"labels":[l1,...], "scores":[tensor,]}]
+        # calculate confusion matrix
+        tp = np.zeros([type_num])
+        fp = np.zeros([type_num])
+        tn = np.zeros([type_num])
+        fn = np.zeros([type_num])
+        preds = []
+        for res in results:
+            one_hot_label = [0] * type_num
+            for l in res['labels']:
+                one_hot_label[l] = 1
+            preds.append([one_hot_label])
+        ground = []
+        for d in data:
+            one_hot_label = [0] * type_num
+            for l in d[1]:
+                one_hot_label[l] = 1
+            ground.append([one_hot_label])
+        preds = np.array(preds)
+        ground = np.array(ground)
+        for i in range(preds.shape[0]):
+            tp+=np.bitwise_and(ground[i],preds[i]).reshape(-1)
+            tn+=np.bitwise_and(~ground[i],~preds[i]).reshape(-1)
+            fp+=np.bitwise_and(~ground[i],preds[i]).reshape(-1)
+            fn+=np.bitwise_and(ground[i],~preds[i]).reshape(-1)
+        result = {}
+        result["precision"] = tp/(tp+fp)
+        result["recall"] = tp/(tp+fn)
+        result["f1"] = 2*result["precision"]*result["recall"]/(result["precision"]+result["recall"])
         return result
 
