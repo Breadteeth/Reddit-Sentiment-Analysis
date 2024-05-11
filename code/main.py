@@ -37,6 +37,9 @@ def main(cli_args):
     elif test_type == "metrics":
         metrics = md.get_metrics(os.path.abspath('..')+'\\code\\data\\'+ data_type +'\\dev.tsv')
         pprint.pprint(metrics)
+    elif test_type == "classed":
+        metrics = md.get_classed_metrics(os.path.abspath('..')+'\\code\\data\\'+ data_type +'\\dev.tsv')
+        pprint.pprint(metrics)
     else:
         raise NotImplementedError("Test type not implemented yet.")
 
